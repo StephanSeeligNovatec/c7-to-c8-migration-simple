@@ -6,7 +6,7 @@
 
   <properties>
     <camunda.spring-boot.version>7.22.0</camunda.spring-boot.version>
-    <spring-boot.version>3.3.3</spring-boot.version>
+    <spring-boot.version>3.3.5</spring-boot.version>
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
 
