@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class StartController {
 
-    @Autowired
-    private StartService startService;
+    private final StartService startService;
+
+    public StartController(StartService startService) {
+        this.startService = startService;
+    }
 
     @PostMapping("/start-process")
     public ResponseEntity<String> startProcess() {

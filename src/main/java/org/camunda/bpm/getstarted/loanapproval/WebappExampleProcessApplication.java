@@ -24,7 +24,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
-@EnableProcessApplication
+// ... existing code ...
 public class WebappExampleProcessApplication {
 
   private final RuntimeService runtimeService;

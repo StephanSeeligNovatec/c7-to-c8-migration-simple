@@ -7,5 +7,6 @@ camunda.bpm:
     create: All tasks
   license-file: classpath:license.key.txt
   history-level: full
+  deployment-resource-pattern: classpath:/processesc7/**/*.bpmn
 
 server.port: 8080
