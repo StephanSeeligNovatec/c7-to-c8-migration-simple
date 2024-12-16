@@ -2,6 +2,7 @@ package org.camunda.bpm.getstarted.loanapproval.delegate;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.camunda.bpm.getstarted.loanapproval.LoggingService;
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
@@ -14,20 +15,15 @@ import java.util.logging.Logger;
 @Component
 public class AnotherC8Delegate implements JavaDelegate {
 
-    private final Logger LOGGER = Logger.getLogger(AnotherC8Delegate.class.getName());
+    private final LoggingService loggingService;
 
-    public void execute(DelegateExecution execution) throws Exception {
+    public AnotherC8Delegate(LoggingService loggingService) {
+        this.loggingService = loggingService;
+    }
 
-        LOGGER.info("\n ... LoggerDelegate invoked by \n"
-                + "activityName='" + execution.getCurrentActivityName() + "'"
-                + ", activityId=" + execution.getCurrentActivityId()
-                + ", processDefinitionId=" + execution.getProcessDefinitionId()
-                + ", processInstanceId=" + execution.getProcessInstanceId()
-                + ", businessKey=" + execution.getProcessBusinessKey()
-                + ", executionId=" + execution.getId()
-                + ", variables=" + execution.getVariables()
-                + " \n\n");
+    public void execute(DelegateExecution execution) {
 
+        loggingService.doLogging(execution);
     }
 
 }
