@@ -12,9 +12,9 @@ import java.util.logging.Logger;
  * from within a BPMN 2.0 Service Task.
  */
 @Component
-public class LoggerDelegate implements JavaDelegate {
+public class AnotherC8Delegate implements JavaDelegate {
 
-    private final Logger LOGGER = Logger.getLogger(LoggerDelegate.class.getName());
+    private final Logger LOGGER = Logger.getLogger(AnotherC8Delegate.class.getName());
 
     public void execute(DelegateExecution execution) throws Exception {
 
