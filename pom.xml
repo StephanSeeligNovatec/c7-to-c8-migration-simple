@@ -8,6 +8,7 @@
     <camunda.spring-boot.version>7.22.0</camunda.spring-boot.version>
     <spring-boot.version>3.3.5</spring-boot.version>
     <maven.compiler.release>17</maven.compiler.release>
+    <camunda8.version>8.6.0</camunda8.version>
   </properties>
 
   <dependencyManagement>
@@ -36,6 +37,12 @@
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
       <version>4.0.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.camunda</groupId>
+      <artifactId>spring-boot-starter-camunda-sdk</artifactId>
+      <version>${camunda8.version}</version>
     </dependency>
   </dependencies>
 

@@ -10,3 +10,6 @@ camunda.bpm:
   deployment-resource-pattern: classpath:/processesc7/**/*.bpmn
 
 server.port: 8080
+
+#zeebe.client.broker.gatewayAddress=127.0.0.1:26500
+#zeebe.client.security.plaintext=true
