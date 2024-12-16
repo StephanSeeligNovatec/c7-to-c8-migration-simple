@@ -1,21 +1,5 @@
-# Camunda Platform - Getting Started with Camunda Platform and Spring Boot
+# Migration C8 Model:
 
-This Repository contains the example Spring Boot application for the guide at [docs.camunda.org](https://docs.camunda.org/get-started/spring-boot/).
+https://github.com/camunda-community-hub/camunda-7-to-8-migration/tree/main/backend-diagram-converter/webapp
 
-This project requires Java 17.
-
-Every step of the tutorial was tagged in this repository. You can jump to the final state of each step
-by the following command:
-
-```
-git checkout -f Step-X
-```
-
-If you want to follow the tutorial along please clone this repository and checkout the `Start` tag.
-
-```
-git clone https://github.com/camunda/camunda-get-started-spring-boot.git
-git checkout -f Start
-```
-
-License: The source files in this repository are made available under the [Apache License Version 2.0](./LICENSE).
+docker run --name diagram-converter -p 8080:8080 ghcr.io/camunda-community-hub/camunda-7-to-8-migration/diagram-converter:latest
