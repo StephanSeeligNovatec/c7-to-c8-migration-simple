@@ -1,7 +1,6 @@
 package org.camunda.bpm.getstarted.loanapproval.service;
 
 import org.camunda.bpm.engine.RuntimeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

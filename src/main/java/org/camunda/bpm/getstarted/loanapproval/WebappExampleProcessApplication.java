@@ -17,27 +17,30 @@
 package org.camunda.bpm.getstarted.loanapproval;
 
 import org.camunda.bpm.engine.RuntimeService;
+import io.camunda.zeebe.spring.client.annotation.Deployment;
 import org.camunda.bpm.spring.boot.starter.event.PostDeployEvent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
+@Deployment(resources = "classpath*:/processesc8/*.*") // Camunda 8 Model deployment
+//https://github.com/camunda-community-hub/spring-zeebe?tab=readme-ov-file#deploy-process-models
 public class WebappExampleProcessApplication {
 
-  private final RuntimeService runtimeService;
+    private final RuntimeService runtimeService;
 
-  public WebappExampleProcessApplication(RuntimeService runtimeService) {
-    this.runtimeService = runtimeService;
-  }
+    public WebappExampleProcessApplication(RuntimeService runtimeService) {
+        this.runtimeService = runtimeService;
+    }
 
-  public static void main(String... args) {
-    SpringApplication.run(WebappExampleProcessApplication.class, args);
-  }
+    public static void main(String... args) {
+        SpringApplication.run(WebappExampleProcessApplication.class, args);
+    }
 
-  @EventListener
-  public void processPostDeploy(PostDeployEvent event) {
-    runtimeService.startProcessInstanceByKey("loanApproval");
-  }
+    @EventListener
+    public void processPostDeploy(PostDeployEvent event) {
+        runtimeService.startProcessInstanceByKey("loanApproval");
+    }
 
 }
