@@ -1,4 +1,4 @@
-package org.camunda.bpm.getstarted.loanapproval;
+package org.camunda.bpm.getstarted.loanapproval.service;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.springframework.stereotype.Service;
@@ -18,6 +18,18 @@ public class LoggingService {
                 + ", businessKey=" + execution.getProcessBusinessKey()
                 + ", executionId=" + execution.getId()
                 + ", variables=" + execution.getVariables()
+                + " \n\n");
+    }
+
+    public void newLogging(String jobType, Long key, String elementId, Long elementInstanceKey, Long processInstanceKey, Long processDefinitionKey, String variables) {
+        LOGGER.info("\n ... LoggerDelegate invoked by \n"
+                + "jobType='" + jobType + "'"
+                + ", key=" + key
+                + ", elementId=" + elementId
+                + ", elementInstanceKey=" + elementInstanceKey
+                + ", processInstanceKey=" + processInstanceKey
+                + ", processDefinitionKey=" + processDefinitionKey
+                + ", variables=" + variables
                 + " \n\n");
     }
 }

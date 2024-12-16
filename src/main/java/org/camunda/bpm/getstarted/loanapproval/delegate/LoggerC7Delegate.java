@@ -2,10 +2,8 @@ package org.camunda.bpm.getstarted.loanapproval.delegate;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
-import org.camunda.bpm.getstarted.loanapproval.LoggingService;
+import org.camunda.bpm.getstarted.loanapproval.service.LoggingService;
 import org.springframework.stereotype.Component;
-
-import java.util.logging.Logger;
 
 /**
  * This is an easy adapter implementation

@@ -24,7 +24,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
-@Deployment(resources = "classpath*:/processesc8/*.*") // Camunda 8 Model deployment
+@Deployment(resources = "classpath*:/processesc8/*.*") // Camunda 8 Model deployment  // TODO Siehe Camunda8Appconfiguration Class
 //https://github.com/camunda-community-hub/spring-zeebe?tab=readme-ov-file#deploy-process-models
 public class WebappExampleProcessApplication {
 

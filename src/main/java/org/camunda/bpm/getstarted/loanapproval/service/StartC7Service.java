@@ -4,11 +4,11 @@ import org.camunda.bpm.engine.RuntimeService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StartService {
+public class StartC7Service {
 
     private final RuntimeService runtimeService;
 
-    public StartService(RuntimeService runtimeService) {
+    public StartC7Service(RuntimeService runtimeService) {
         this.runtimeService = runtimeService;
     }
 
