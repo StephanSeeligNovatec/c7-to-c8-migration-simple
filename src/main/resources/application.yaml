@@ -5,5 +5,7 @@ camunda.bpm:
     firstName: Demo
   filter:
     create: All tasks
+  license-file: classpath:license.key.txt
+  history-level: full
 
 server.port: 8080
